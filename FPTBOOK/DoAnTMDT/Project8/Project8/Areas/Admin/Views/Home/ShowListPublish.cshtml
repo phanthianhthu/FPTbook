@@ -1,0 +1,61 @@
+﻿@model IEnumerable<WebBanSach.Models.Data.NhaXuatBan>
+
+@{
+    ViewBag.Title = "ShowListPublish";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Show List Publish</h2>
+
+<p>
+    @Html.ActionLink("Add Publish", "AddPublish")
+</p>
+<table class="table" id="myTable">
+    <thead>
+        <tr>
+            <th>
+                ID
+            </th>
+            <th>
+                Publisher
+            </th>
+            <th>
+                Address
+            </th>
+            <th>
+                Điện Thoại
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr id="row_@item.MaNXB">
+                <td>
+                    @Html.DisplayFor(modelItem => item.MaNXB)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TenNXB)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DiaChi)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DienThoai)
+                </td>
+                <td>
+                    @Html.ActionLink("Show", "UpdatePublish", new { id = item.MaNXB }) |
+                    @Ajax.ActionLink("Delete", "DeletePublish", new { id = item.MaNXB }, new AjaxOptions
+               {
+                   Confirm = "Do you want to delete this publisher?",
+                   OnComplete = "$('#row_" + @item.MaNXB + "').remove()",
+                   HttpMethod = "Delete"
+               })
+                </td>
+            </tr>
+        }
+    </tbody>
+
+</table>
