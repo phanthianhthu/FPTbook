@@ -5,7 +5,7 @@
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
 }
 
-<h2>Chi tiết người dùng</h2>
+<h2>User details</h2>
 
 <div>
     <hr />
@@ -79,12 +79,12 @@
         </dt>
 
         <dd>
-            <a href="#">@(Model.TrangThai ? "Kích hoạt" : "Khóa")</a>
+            <a href="#">@(Model.TrangThai ? "Activity" : "lock")</a>
         </dd>
 
     </dl>
 </div>
 <p>  
-    @Html.ActionLink("Trở về", "ShowUser")
+    @Html.ActionLink("Back", "ShowUser")
     @*@Html.ActionLink("Edit", "Edit", new { id = Model.MaKH })*@
 </p>

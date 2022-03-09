@@ -1,23 +1,23 @@
 ﻿@model IEnumerable<WebBanSach.Models.Data.TacGia>
 
 @{
-    ViewBag.Title = "Quản lý tác giả";
+    ViewBag.Title = "Manage Author";
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
 }
 
-<h2>Quản lý tác giả</h2>
+<h2>Show List Author</h2>
 
 <p>
-    @Html.ActionLink("Thêm tác giả", "AddAuthor")
+    @Html.ActionLink("Add Author", "AddAuthor")
 </p>
 <table class="table" id="myTable">
     <thead>
         <tr>
             <th>
-                Mã
+                ID
             </th>
             <th>
-                Tác Giả
+                Author
             </th>
             <th></th>
         </tr>
@@ -33,10 +33,10 @@
                     @Html.DisplayFor(modelItem => item.TenTG)
                 </td>
                 <td>
-                    @Html.ActionLink("Xem", "UpdateAuthor", new { id = item.MaTG }) |
-                    @Ajax.ActionLink("Xóa", "DeleteAuthor", new { id = item.MaTG }, new AjaxOptions
+                    @Html.ActionLink("Show", "UpdateAuthor", new { id = item.MaTG }) |
+                    @Ajax.ActionLink("Delete", "DeleteAuthor", new { id = item.MaTG }, new AjaxOptions
                {
-                   Confirm = "Bạn có muốn xóa tác giả này không?",
+                   Confirm = "Do you want to remove this author?",
                    OnComplete = "$('#row_" + @item.MaTG + "').remove()",
                    HttpMethod = "Delete"
                })

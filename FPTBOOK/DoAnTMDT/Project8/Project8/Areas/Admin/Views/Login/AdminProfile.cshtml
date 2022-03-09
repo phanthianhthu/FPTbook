@@ -10,13 +10,15 @@
     <ul class="dropdown-menu dropdown-user">
         @if (session != null)
         {
-            <li>
-                <a href="/Admin/Login/AdminInfo"><i class="fa fa-user fa-fw"></i>Profile</a>
-            </li>
-        }
+    <li>
+        <a href="/Admin/Login/AdminInfo"><i class="fa fa-user fa-fw"></i>Profile</a>
+    </li>}
         <li class="divider"></li>
         <li>
             @Html.ActionLink(" Log out", "Logout", "Login", new { @class = "fa fa-sign-out fa-fw" })
+        </li>
+        <li>
+            <a href="/Home/"><i class="fa fa-home"></i>Home</a>
         </li>
     </ul>
     <!-- /.dropdown-user -->

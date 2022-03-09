@@ -5,7 +5,7 @@
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
 }
 
-<h2>Cập nhật sách</h2>
+<h2>Update Book </h2>
 
 @using (Html.BeginForm("UpdateBook", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
@@ -30,7 +30,7 @@
         </div>
 
         <div class="form-group">
-            <label class="control-label col-md-2">Loại</label>
+            <label class="control-label col-md-2">Type</label>
             <div class="col-md-10">
                 @Html.DropDownList("MaLoai", null, new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.MaLoai, "", new { @class = "text-danger" })
@@ -38,7 +38,7 @@
         </div>
 
         <div class="form-group">
-            <label class="control-label col-md-2">Nhà xuất bản</label>
+            <label class="control-label col-md-2">Publish</label>
             <div class="col-md-10">
                 @Html.DropDownList("MaNXB", null, new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.MaNXB, "", new { @class = "text-danger" })
@@ -46,7 +46,7 @@
         </div>
 
         <div class="form-group">
-            <label class="control-label col-md-2">Tác giả</label>
+            <label class="control-label col-md-2">Author</label>
             <div class="col-md-10">
                 @Html.DropDownList("MaTG", null, new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.MaTG, "", new { @class = "text-danger" })
@@ -81,7 +81,7 @@
             @Html.LabelFor(model => model.AnhBia, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 <img src="/images/@Model.AnhBia" width="100" height="150" />
-                <input type="file" name="fileUpload" value="@Model.AnhBia" /> Cập nhật ảnh
+                <input type="file" name="fileUpload" value="@Model.AnhBia" /> Update Image
                 @ViewBag.Alert
                 @Html.EditorFor(model => model.AnhBia, new { @class = "form-control" })
             </div>
@@ -105,12 +105,12 @@
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Cập nhật" class="btn btn-default" />
+                <input type="submit" value="Update" class="btn btn-default" />
             </div>
         </div>
     </div>
 }
 
 <div>
-    @Html.ActionLink("Trở về", "DetailsBook", new { id = Model.MaSach })
+    @Html.ActionLink("Back", "DetailsBook", new { id = Model.MaSach })
 </div>

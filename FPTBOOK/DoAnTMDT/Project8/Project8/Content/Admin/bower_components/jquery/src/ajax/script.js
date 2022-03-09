@@ -1,3 +1,4 @@
+$('.dropdown-toggle').dropdown()
 define([
 	"../core",
 	"../ajax"

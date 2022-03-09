@@ -8,12 +8,12 @@
 }
 
 <div class="row">
-    <div class="col-md-3">
-        <p class="fa fa-bars"><i aria-hidden="true"></i><font style="color:#087BB0; text-align:center"> DANH MỤC SẢN PHẨM</font></p>
+    <div class="col-md-3" style="border-radius: 26px;border: 1px solid #dea3a3;   background-image: linear-gradient(to top, #a8edea 0%, #0099FF 100%);">
+        <p style="text-align: center; margin: 5px;font-size: 25px;font-weight: 600;"><i aria-hidden="true"></i><font style="color:#087BB0; text-align:center"> PRODUCT PORTFOLIO</font></p>
         @Html.Action("ShowCategory", "Home")
     </div>
     <div class="col-md-9">
-        <h3>Kết quả tìm kiếm</h3>
+        <h3>Search Results</h3>
         <p>@ViewBag.ThongBao</p>
         <hr />        
         <div class="row">
@@ -28,14 +28,14 @@
                             <h4>
                                 <a title="@item.TenSach" href="/Book/Details/@item.MaSach" style="color:#087BB0;">@(item.TenSach.Length > 26 ? item.TenSach.Substring(0, 22) + "..." : item.TenSach)</a>
                             </h4>
-                            <a style="color:black" class="btn btn-warning" href="/Cart/AddItem/?id=@item.MaSach&quantity=1">Mua hàng</a>
+                            <a style="color:black" class="btn btn-warning" href="/Cart/AddItem/?id=@item.MaSach&quantity=1">Buying</a>
                             @if (item.GiaBan > 0)
                             {
-                                <h4 class="pull-right" style="color:black;">@item.GiaBan.Value.ToString("N0") VND</h4>
+                                <h4 class="pull-right" style="color:black;">@item.GiaBan.Value.ToString("N0")$</h4>
                             }
                             else
                             {
-                                <h4 class="pull-right" style="color:red;">Liên hệ</h4>
+                                <h4 class="pull-right" style="color:red;">Contact</h4>
                             }
                         </div>
                     </div>
