@@ -672,6 +672,8 @@
     <Content Include="Content\PagedList.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="images\cambridge.jpg" />
+    <Content Include="images\english.jpg" />
     <Content Include="images\folk tales...jpg" />
     <Content Include="images\hinhnen1.jpg" />
     <Content Include="images\hinhnen2.jpg" />
@@ -680,6 +682,7 @@
     <Content Include="images\icon_g_2x.jpg" />
     <Content Include="images\logo.jpg" />
     <Content Include="images\me-before-you.jpg" />
+    <Content Include="images\The_Little_Prince.jpg" />
     <Content Include="images\topSach.png" />
     <Content Include="Scripts\ai.0.22.9-build00167.js" />
     <Content Include="Scripts\ai.0.22.9-build00167.min.js" />

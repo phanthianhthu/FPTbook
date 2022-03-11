@@ -5,7 +5,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <_PublishTargetUrl>C:\webfptbook</_PublishTargetUrl>
-    <History>True|2022-03-09T16:28:20.6372375Z;</History>
+    <History>True|2022-03-10T07:38:40.2500728Z;True|2022-03-09T23:28:20.6372375+07:00;</History>
   </PropertyGroup>
   <ItemGroup>
     <File Include="ApplicationInsights.config">
@@ -141,10 +141,10 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>11/04/2020 01:04:48</publishTime>
     </File>
     <File Include="bin/Project8.dll">
-      <publishTime>03/09/2022 23:28:00</publishTime>
+      <publishTime>03/10/2022 14:48:36</publishTime>
     </File>
     <File Include="bin/Project8.pdb">
-      <publishTime>03/09/2022 23:28:00</publishTime>
+      <publishTime>03/10/2022 14:48:36</publishTime>
     </File>
     <File Include="bin/roslyn/csc.exe">
       <publishTime>11/04/2020 01:04:48</publishTime>
@@ -2705,6 +2705,12 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
     <File Include="Global.asax">
       <publishTime>11/04/2020 01:04:48</publishTime>
     </File>
+    <File Include="images/cambridge.jpg">
+      <publishTime>03/10/2022 14:46:10</publishTime>
+    </File>
+    <File Include="images/english.jpg">
+      <publishTime>03/10/2022 14:47:07</publishTime>
+    </File>
     <File Include="images/folk tales...jpg">
       <publishTime>03/08/2022 19:12:34</publishTime>
     </File>
@@ -2728,6 +2734,9 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
     </File>
     <File Include="images/me-before-you.jpg">
       <publishTime>11/04/2020 01:04:48</publishTime>
+    </File>
+    <File Include="images/The_Little_Prince.jpg">
+      <publishTime>03/08/2022 18:55:41</publishTime>
     </File>
     <File Include="images/topSach.png">
       <publishTime>11/04/2020 01:04:48</publishTime>
