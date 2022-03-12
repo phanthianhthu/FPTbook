@@ -32,8 +32,6 @@ namespace Project8.Models.Process
             {
                 try
                 {
-                    // MoMo's public key has format PEM.
-                    // You must convert it to XML format. Recommend tool: https://superdry.apphb.com/tools/online-rsa-key-converter
                     rsa.FromXmlString(publicKeyXML);
                     var encryptedData = rsa.Encrypt(data, false);
                     var base64Encrypted = Convert.ToBase64String(encryptedData);
