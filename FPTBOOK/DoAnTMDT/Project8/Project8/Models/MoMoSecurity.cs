@@ -94,7 +94,6 @@ namespace Project8.Models.Process
             {
                 try
                 {
-                    // client encrypting data with public key issued by server
                     rsa.FromXmlString(publicKey);
                     var encryptedData = rsa.Encrypt(data, false);
                     var base64Encrypted = Convert.ToBase64String(encryptedData);
